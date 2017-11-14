@@ -14,6 +14,14 @@ export default class PCHeader extends React.Component {
             current: 'toutiao'
         };
     }
+
+    handleClick = (e) => {
+        console.log('click ', e);
+        this.setState({
+            current: e.key,
+        });
+    }
+
     render() {
         return (
             <header>
@@ -26,7 +34,7 @@ export default class PCHeader extends React.Component {
                        </a>
                    </Col>
                    <Col span={10}>
-                       <Menu mode="horizontal" selectedKeys={[this.state.current]}>
+                       <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]}>
                            <Menu.Item key="toutiao">
                                <Icon type="appstore"/>头条
                            </Menu.Item >
