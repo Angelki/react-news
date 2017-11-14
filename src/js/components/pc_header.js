@@ -26,14 +26,14 @@ export default class PCHeader extends React.Component {
         return (
             <header>
                <Row>
-                   <Col span={2}></Col>
+                   <Col span={4}></Col>
                    <Col span={4}>
                        <a href="/" className="logo">
                            <img src="./logo.png" alt="logo" />
                            <span>ReactNews</span>
                        </a>
                    </Col>
-                   <Col span={10}>
+                   <Col span={8}>
                        <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]}>
                            <Menu.Item key="toutiao">
                                <Icon type="appstore"/>头条
@@ -58,7 +58,7 @@ export default class PCHeader extends React.Component {
                            </Menu.Item>
                        </Menu>
                    </Col>
-                   <Col span={2}></Col>
+                   <Col span={8}></Col>
                </Row>
             </header>
         );
