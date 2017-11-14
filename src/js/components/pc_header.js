@@ -3,10 +3,17 @@
  */
 import React from 'react';
 import { Row, Col } from 'antd';
+import { Menu, Icon } from 'antd';
 import '../../css/pc.css';
-import '../../images/logo.png';
 
+const SubMenu = Menu.SubMenu;
 export default class PCHeader extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            current: 'toutiao'
+        };
+    }
     render() {
         return (
             <header>
@@ -17,6 +24,31 @@ export default class PCHeader extends React.Component {
                            <img src="./logo.png" alt="logo" />
                            <span>ReactNews</span>
                        </a>
+                   </Col>
+                   <Col span={10}>
+                       <Menu mode="horizontal" selectedKeys={[this.state.current]}>
+                           <Menu.Item key="toutiao">
+                               <Icon type="appstore"/>头条
+                           </Menu.Item >
+                           <Menu.Item key="shehui">
+                               <Icon type="appstore"/>社会
+                           </Menu.Item>
+                           <Menu.Item key="guonei">
+                               <Icon type="appstore"/>国内
+                           </Menu.Item>
+                           <Menu.Item key="guoji">
+                               <Icon type="appstore"/>国际
+                           </Menu.Item>
+                           <Menu.Item key="keji">
+                               <Icon type="appstore"/>科技
+                           </Menu.Item >
+                           <Menu.Item key="tiyu">
+                               <Icon type="appstore"/>体育
+                           </Menu.Item>
+                           <Menu.Item key="shishang">
+                               <Icon type="appstore"/>时尚
+                           </Menu.Item>
+                       </Menu>
                    </Col>
                    <Col span={2}></Col>
                </Row>
