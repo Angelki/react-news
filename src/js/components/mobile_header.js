@@ -2,6 +2,8 @@
  * Created by angelks on 2017/11/14.
  */
 import React from 'react';
+import { Row, Col } from 'antd';
+import { Menu, Icon } from 'antd';
 
 export default  class MobileHeader extends React.Component {
     render() {

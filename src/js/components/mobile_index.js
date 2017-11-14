@@ -2,7 +2,7 @@
  * Created by angelks on 2017/11/14.
  */
 import React from 'react';
-import MobileHeader from './pc_header'
+import MobileHeader from './mobile_header'
 import {Row, Col} from 'antd';
 
 

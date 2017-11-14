@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 
 import  'antd/dist/antd.css';
 import PCIndex from './components/pc_index';
+import MobileIndex from './components/mobile_index';
 import MediaQuery from 'react-responsive';
 import registerServiceWorker from './registerServiceWorker';
 
