@@ -5,19 +5,22 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { Menu, Icon, Tabs,
          message,
-        Form,
-        Input,
-    Button,
-    Checkbox
+         Form,
+         Input,
+         Button,
+         Checkbox,
+        Modal
 } from 'antd';
 
 import '../../css/pc.css';
 import {Link} from "react-router-dom";
+// import Modal from "antd/lib/modal/Modal.d";
 
 
 const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
+const TabPane = Tabs.TabPane;
 
 class PCHeader extends React.Component {
     constructor() {
@@ -25,20 +28,31 @@ class PCHeader extends React.Component {
         this.state = {
             current: 'toutiao',
             modalVisible: false,
-            action:'login',
-            hasLogined:'false',
-            userNickName:'',
+            action: 'login',
+            hasLogined:false,
+            userNickName: '',
             userid: 0
         };
     }
 
     handleClick = (e) => {
-        console.log('click ', e);
-        this.setState({
-            current: e.key,
-        });
+        if(e.key="register") {
+            this.setState({current:'register'});
+            this.setModalVisible(true);
+        } else {
+            console.log('click ', e);
+            this.setState({
+                current: e.key,
+            });
+        }
+    };
+    handleSubmit(e) {
+        //向api提交数据
     }
 
+    setModalVisible(value) {
+        this.setState({modalVisible: value});
+    };
     render() {
         let {getFieldProps} = this.props.form;
         const userShow = this.state.hasLogined
@@ -74,9 +88,6 @@ class PCHeader extends React.Component {
                            <Menu.Item key="shehui">
                                <Icon type="appstore"/>社会
                            </Menu.Item>
-                           <Menu.Item key="guonei">
-                               <Icon type="appstore"/>国内
-                           </Menu.Item>
                            <Menu.Item key="guoji">
                                <Icon type="appstore"/>国际
                            </Menu.Item>
@@ -91,6 +102,25 @@ class PCHeader extends React.Component {
                            </Menu.Item>
                            {userShow}
                        </Menu>
+
+                       <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel={()=>this.setModalVisible(false)} onOk={()=>this.setModalVisible(false)} okText="关闭">
+                           <Tabs type="card">
+                               <TabPane tab="注册" key="2">
+                                   <Form horizontal onSubmit={this.handleSubmit.bind(this)}>
+                                       <FormItem label="账户">
+                                           <Input placeholder="请输入您的账号" {...getFieldProps('r_userName')} />
+                                       </FormItem>
+                                       <FormItem label="密码">
+                                           <Input  type="password" placeholder="请输入您的密码" {...getFieldProps('r_password')} />
+                                       </FormItem>
+                                       <FormItem label="确认密码">
+                                           <Input type="password" placeholder="请再次输入您的密码" {...getFieldProps('r_confirmPassword')} />
+                                       </FormItem>
+                                       <Button type="primary" htmlType="submit">注册</Button>
+                                   </Form>
+                               </TabPane>
+                           </Tabs>
+                       </Modal>
                    </Col>
                    <Col span={8}></Col>
                </Row>
