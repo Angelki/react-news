@@ -63,13 +63,15 @@ class PCHeader extends React.Component {
                 var myFetchOptions = {
                     method: 'GET'
                 };
-                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&r_userName="
+                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action="+this.state.action+"&r_userName="
                     +values.r_userName+
                     "&r_password="+values.r_password+
-                    "&r_confirmPassword"+values.r_confirmPassword,myFetchOptions)
+                    "&r_confirmPassword"+values.r_confirmPassword,
+                    myFetchOptions)
                     .then(response=>response.json())
                     .then(json=>{
                         this.setState({userNickName:json.NickUserName,userid:json.UserId});
+
                     });
                 message.success("请求成功");
                 this.setModalVisible(false);
@@ -83,6 +85,14 @@ class PCHeader extends React.Component {
     //     + formData.r_confirmPassword, myFetchOptions)
     setModalVisible(value) {
         this.setState({modalVisible: value});
+    };
+
+    callback(key) {
+        if(key == 1) {
+            this.setState({action: 'login'});
+        } else if(key == 2) {
+            this.setState({action: 'register'});
+        }
     };
     render() {
         let {getFieldProps} = this.props.form;
@@ -137,7 +147,23 @@ class PCHeader extends React.Component {
                        </Menu>
 
                        <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel={()=>this.setModalVisible(false)} onOk={()=>this.setModalVisible(false)} okText="关闭">
-                           <Tabs type="card">
+                           <Tabs type="card" onChange={this.callback.bind(this)}>
+                               <TabPane tab="登录" key="1">
+                                   <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
+                                   <FormItem label="账户">
+                                       {getFieldDecorator('userName')(
+                                           <Input placeholder="请输入您的账户"/>
+                                       )}
+                                   </FormItem>
+                                   <FormItem label="密码">
+                                           {getFieldDecorator('password')(
+                                               <Input type="password" placeholder="请输入您的密码"/>
+                                           )}
+                                   </FormItem>
+                                       <Button type="primary" htmlType="submit">登录</Button>
+                                   </Form>
+
+                               </TabPane>
                                <TabPane tab="注册" key="2">
                                    <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
                                        <FormItem label="账户">
