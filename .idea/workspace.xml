@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25f3ad1-eba4-4cb3-a223-c34fb70cd023" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/mobile.css" afterPath="$PROJECT_DIR$/src/css/mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/mobile_header.js" afterPath="$PROJECT_DIR$/src/js/components/mobile_header.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/components/event.target.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/components/target.e.html" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -362,12 +362,12 @@
       <workItem from="1510558081552" duration="8797000" />
       <workItem from="1510621509744" duration="12785000" />
       <workItem from="1510882714265" duration="2791000" />
-      <workItem from="1511151616663" duration="3240000" />
+      <workItem from="1511151616663" duration="3320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30171000" />
+    <option name="totallyTimeSpent" value="30251000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,9 +380,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1170" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23846823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23846823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
