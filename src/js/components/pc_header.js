@@ -60,10 +60,27 @@ class PCHeader extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
+                var myFetchOptions = {
+                    method: 'GET'
+                };
+                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&r_userName="
+                    +values.r_userName+
+                    "&r_password="+values.r_password+
+                    "&r_confirmPassword"+values.r_confirmPassword,myFetchOptions)
+                    .then(response=>response.json())
+                    .then(json=>{
+                        this.setState({userNickName:json.NickUserName,userid:json.UserId});
+                    });
+                message.success("请求成功");
+                this.setModalVisible(false);
             }
         });
-    }
-
+    };
+    // fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
+    //     + "&username="+formData.userName+"&password="+formData.password
+    //     +"&r_userName=" + formData.r_userName + "&r_password="
+    //     + formData.r_password + "&r_confirmPassword="
+    //     + formData.r_confirmPassword, myFetchOptions)
     setModalVisible(value) {
         this.setState({modalVisible: value});
     };
@@ -96,7 +113,7 @@ class PCHeader extends React.Component {
                            <span>ReactNews</span>
                        </a>
                    </Col>
-                   <Col span={8}>
+                   <Col span={12}>
                        <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]}>
                            <Menu.Item key="toutiao">
                                <Icon type="appstore"/>头条
@@ -162,7 +179,7 @@ class PCHeader extends React.Component {
                            </Tabs>
                        </Modal>
                    </Col>
-                   <Col span={8}></Col>
+                   <Col span={4}></Col>
                </Row>
             </header>
         );

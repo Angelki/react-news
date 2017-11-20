@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+    <style type ="text/css">
+    html,body{width:100%;height:100%}
+    ul{padding:0px;margin:0px;list-style:none;}
+    li{cursor:pointer;padding:0px 5px; line-height:25px;height:25px;}
+    </style>
+</head>
+<body>
+ <p>
+    <input type='text' id='txtInput'  onkeyup='getSearchKeys()'/>
+    <div id='divShow' style="position:absolute; z-index:9999; width:200px; height:auto; display:none;border:1px solid #ddd">
+    <ul>
+    <li>aaa</li>
+    </ul>
+    </div>
+    </p>
+</body>
+<script type="text/javascript">
+var keys=['ada','sdfsd','bbb','sfga','dfhgfh','235s','dfew','ghjk','hjkghjk','fgjgfjf','fghjgfj','2345f','fthtr','sfgerw','tyerth','vnmu','wertewr','wert','asdfaf','zxcvd','gkju','dvfgdh','2354af','adsf','erterter','fghdfg','xvdfg','kjhu','qweasdas','xzce','werwre','zzczc','rtewtrew']; //  搜索值，可以用Ajax从数据库获取
+var txtInput ;
+var divShow ;
+window.onload=function()
+{
+     txtInput =document.getElementById("txtInput");
+     divShow = document.getElementById("divShow");
+     var p =getAbsPoint(txtInput);
+     divShow.style.left = p.x +'px';
+     divShow.style.top = p.y + txtInput.offsetHeight + 'px';
+   txtInput.onclick = divShow.onclick=function(e)
+    {
+         e = e||event;
+         var t = e.target||e.srcElement
+ 
+        if(t.tagName.toLowerCase()=='li')
+        {
+          txtInput.value = t.innerHTML; 
+           divShow.style.display = "none";
+           return;
+        }
+        if(e && e.stopPropagation){
+          //W3C取消冒泡事件
+          e.stopPropagation();
+          }else{
+          //IE取消冒泡事件
+          window.event.cancelBubble = true;
+          }
+    };
+    document.body.onclick=function(e)
+    {
+        divShow.style.display = "none";
+    };
+};
+function getSearchKeys()
+{
+  var s= txtInput.value;
+    if(s=='')
+    {
+        divShow.style.display = "none";
+        return;
+    }
+      var arr=['<ul>'];
+      for(var i=0;i<keys.length;i++)
+      {
+        if(keys[i].indexOf(s)>=0){
+        arr.push('<li>'+keys[i]+'</li>');
+        }
+      }
+     
+      if(arr.length>1){
+        arr.push('</ul>');
+        divShow.innerHTML = arr.join('');
+        divShow.style.display = "block";
+      }else{
+        divShow.style.display = "none";
+      }
+}
+ 
+function getAbsPoint(e)
+{
+    var x = e.offsetLeft;
+    var y = e.offsetTop;
+    while(e = e.offsetParent)
+    {
+        x += e.offsetLeft;
+        y += e.offsetTop;
+    }
+    return {"x": x, "y": y};
+}
+</script>
+</html>
