@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25f3ad1-eba4-4cb3-a223-c34fb70cd023" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/pc.css" afterPath="$PROJECT_DIR$/src/css/pc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/pc_news_block.js" afterPath="$PROJECT_DIR$/src/js/components/pc_news_block.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/pc_newscontainer.js" afterPath="$PROJECT_DIR$/src/js/components/pc_newscontainer.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +52,8 @@
       <file leaf-file-name="pc_news_block.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/pc_news_block.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="171">
+              <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
@@ -367,12 +365,12 @@
       <workItem from="1510621509744" duration="12785000" />
       <workItem from="1510882714265" duration="2791000" />
       <workItem from="1511151616663" duration="4857000" />
-      <workItem from="1511187470741" duration="10826000" />
+      <workItem from="1511187470741" duration="10899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42614000" />
+    <option name="totallyTimeSpent" value="42687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,7 +382,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="292" y="103" width="1722" height="945" extended-state="1" />
+    <frame x="292" y="103" width="1722" height="945" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32627866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -776,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/pc_news_block.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="171">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#45#71#0" expanded="true" />

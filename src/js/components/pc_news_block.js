@@ -3,8 +3,8 @@
  */
 import React from 'react';
 import {Card} from 'antd';
-import {Route, Router, browserHistory} from 'react-router';
-import {Link} from 'react-router-dom';
+// import {Route, Router, browserHistory} from 'react-router';
+// import {Link} from 'react-router-dom';
 
 export default class PCNewsBlock extends React.Component {
     constructor() {
@@ -29,9 +29,9 @@ export default class PCNewsBlock extends React.Component {
             ?
             news.map((newsItem,index) => (
                 <li key={index}>
-                    <Link to={`details/${newsItem.uniquekey}`} target={"_blank"}>
+                    {/*<Link to={`details/${newsItem.uniquekey}`} target={"_blank"}>*/}
                         {newsItem.title}
-                    </Link>
+                    {/*</Link>*/}
                 </li>
             ))
             :
