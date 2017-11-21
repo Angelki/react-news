@@ -13,7 +13,7 @@ import { Menu, Icon, Tabs,
 } from 'antd';
 
 import '../../css/pc.css';
-import {Link} from "react-router-dom";
+import {Router, Route, Link, browserHistory} from 'react-router'
 // import Modal from "antd/lib/modal/Modal.d";
 
 
@@ -63,51 +63,66 @@ class PCHeader extends React.Component {
                 var myFetchOptions = {
                     method: 'GET'
                 };
-                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action="+this.state.action+"&r_userName="
-                    +values.r_userName+
+                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action="+this.state.action+
+                    "&userName"+values.userName+
+                    "&password"+values.password+
+                    "&r_userName=" +values.r_userName+
                     "&r_password="+values.r_password+
                     "&r_confirmPassword"+values.r_confirmPassword,
                     myFetchOptions)
                     .then(response=>response.json())
                     .then(json=>{
                         this.setState({userNickName:json.NickUserName,userid:json.UserId});
-
+                        localStorage.userid = json.UserId;
+                        localStorage.userNickName = json.NickUserName;
                     });
+                if(this.state.action === "login") {
+                    this.setState({hasLogined: true});
+                }
                 message.success("请求成功");
                 this.setModalVisible(false);
             }
         });
     };
-    // fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
-    //     + "&username="+formData.userName+"&password="+formData.password
-    //     +"&r_userName=" + formData.r_userName + "&r_password="
-    //     + formData.r_password + "&r_confirmPassword="
-    //     + formData.r_confirmPassword, myFetchOptions)
+
+    // componentWillMount(){
+    //     if (localStorage.userid!=='') {
+    //         this.setState({hasLogined:true});
+    //         this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid});
+    //     }
+    // };
+
+
     setModalVisible(value) {
         this.setState({modalVisible: value});
     };
 
     callback(key) {
-        if(key == 1) {
+        if(key === 1) {
             this.setState({action: 'login'});
-        } else if(key == 2) {
+        } else if(key === 2) {
             this.setState({action: 'register'});
         }
     };
+    logout() {
+        localStorage.userid = '';
+        localStorage.userNickName = '';
+        this.setState({hasLogined: false});
+    }
     render() {
-        let {getFieldProps} = this.props.form;
+        // let {getFieldProps} = this.props.form;
         const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
 
         const userShow = this.state.hasLogined
             ?
             <Menu.Item key="logout" className="register">
-                <Button type="primary">{this.state.userNickName}</Button>
-                &nbsp;&nbsp;
+                {/*<Button type="primary" htmlType="button">{this.state.userNickName}</Button>*/}
+                {/*&nbsp;&nbsp;*/}
                 {/*<Link target="_blank">*/}
                     <Button type="dashed" htmlType="button">个人中心</Button>
                 {/*</Link>*/}
                 &nbsp;&nbsp;
-                <Button type="ghost">退出</Button>
+                <Button type="ghost" onClick={this.logout.bind(this)}>退出</Button>
             </Menu.Item>
             :
             <Menu.Item key="register" className="register">
