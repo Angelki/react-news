@@ -131,14 +131,14 @@ class PCHeader extends React.Component {
         return (
             <header>
                <Row>
-                   <Col span={4}></Col>
+                   <Col span={2}></Col>
                    <Col span={4}>
                        <a href="/" className="logo">
                            <img src="./logo.png" alt="logo" />
                            <span>ReactNews</span>
                        </a>
                    </Col>
-                   <Col span={12}>
+                   <Col span={16}>
                        <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]}>
                            <Menu.Item key="toutiao">
                                <Icon type="appstore"/>头条
@@ -155,72 +155,66 @@ class PCHeader extends React.Component {
                            <Menu.Item key="tiyu">
                                <Icon type="appstore"/>体育
                            </Menu.Item>
+                           <Menu.Item key="guonei">
+                               <Icon type="appstore"/>国内
+                           </Menu.Item>
+                           <Menu.Item key="yule">
+                               <Icon type="appstore"/>娱乐
+                           </Menu.Item>
+                           <Menu.Item key="jianshen">
+                               <Icon type="appstore"/>健身
+                           </Menu.Item>
                            <Menu.Item key="shishang">
                                <Icon type="appstore"/>时尚
                            </Menu.Item>
+                           <Menu.Item key="IT">
+                               <Icon type="appstore"/>IT
+                           </Menu.Item>
                            {userShow}
                        </Menu>
+                   </Col>
+                   <Col span={2}></Col>
 
-                       <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel={()=>this.setModalVisible(false)} onOk={()=>this.setModalVisible(false)} okText="关闭">
-                           <Tabs type="card" onChange={this.callback.bind(this)}>
-                               <TabPane tab="登录" key="1">
-                                   <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
+                   <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel={()=>this.setModalVisible(false)} onOk={()=>this.setModalVisible(false)} okText="关闭">
+                       <Tabs type="card" onChange={this.callback.bind(this)}>
+                           <TabPane tab="登录" key="1">
+                               <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
                                    <FormItem label="账户">
                                        {getFieldDecorator('userName')(
                                            <Input placeholder="请输入您的账户"/>
                                        )}
                                    </FormItem>
                                    <FormItem label="密码">
-                                           {getFieldDecorator('password')(
-                                               <Input type="password" placeholder="请输入您的密码"/>
-                                           )}
+                                       {getFieldDecorator('password')(
+                                           <Input type="password" placeholder="请输入您的密码"/>
+                                       )}
                                    </FormItem>
-                                       <Button type="primary" htmlType="submit">登录</Button>
-                                   </Form>
+                                   <Button type="primary" htmlType="submit">登录</Button>
+                               </Form>
 
-                               </TabPane>
-                               <TabPane tab="注册" key="2">
-                                   <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
-                                       <FormItem label="账户">
-                                           {getFieldDecorator('r_userName')(
-                                               <Input placeholder="请输入您的账户"/>
-                                           )}
-                                       </FormItem>
-                                       <FormItem label="密码">
-                                           {getFieldDecorator('r_password')(
-                                               <Input type="password" placeholder="请输入您的密码"/>
-                                           )}
-                                       </FormItem>
-                                       <FormItem label="确认密码">
-                                           {getFieldDecorator('r_confirmPassword')(
-                                               <Input type="password" placeholder="请再次输入你的密码"/>
-                                           )}
-                                       </FormItem>
-                                       <Button type="primary" htmlType="submit">注册</Button>
-                                   </Form>
-                                   {/*<Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>*/}
-                                       {/*<FormItem label="账户">*/}
-                                           {/*{getFieldDecorator('userName', {*/}
-                                               {/*rules: [{ required: true, message: '请输入你的用户名!' }],*/}
-                                           {/*})(*/}
-                                               {/*<Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />*/}
-                                           {/*)}*/}
-                                           {/*/!*<Input placeholder="请输入您的账号" {...getFieldProps('r_userName')} />*!/*/}
-                                       {/*</FormItem>*/}
-
-                                       {/*/!*<FormItem label="密码">*!/*/}
-                                           {/*/!*<Input  type="password" placeholder="请输入您的密码" {...getFieldProps('r_password')} />*!/*/}
-                                       {/*/!*</FormItem>*!/*/}
-                                       {/*/!*<FormItem label="确认密码">*!/*/}
-                                           {/*/!*<Input type="password" placeholder="请再次输入您的密码" {...getFieldProps('r_confirmPassword')} />*!/*/}
-                                       {/*/!*</FormItem>*!/*/}
-                                       {/*<Button type="primary" htmlType="submit">注册</Button>*/}
-                                   {/*</Form>*/}
-                               </TabPane>
-                           </Tabs>
-                       </Modal>
-                   </Col>
-                   <Col span={4}></Col>
+                           </TabPane>
+                           <TabPane tab="注册" key="2">
+                               <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
+                                   <FormItem label="账户">
+                                       {getFieldDecorator('r_userName')(
+                                           <Input placeholder="请输入您的账户"/>
+                                       )}
+                                   </FormItem>
+                                   <FormItem label="密码">
+                                       {getFieldDecorator('r_password')(
+                                           <Input type="password" placeholder="请输入您的密码"/>
+                                       )}
+                                   </FormItem>
+                                   <FormItem label="确认密码">
+                                       {getFieldDecorator('r_confirmPassword')(
+                                           <Input type="password" placeholder="请再次输入你的密码"/>
+                                       )}
+                                   </FormItem>
+                                   <Button type="primary" htmlType="submit">注册</Button>
+                               </Form>
+                           </TabPane>
+                       </Tabs>
+                   </Modal>
                </Row>
             </header>
         );
