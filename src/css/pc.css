@@ -17,6 +17,21 @@
     /*float: right !important;*/
 /*}*/
 
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    overflow: hidden;
+}
+.ant-carousel .slick-slide img {
+    height: 720px;
+    width: 100%;
+}
+
+
+.ant-carousel .slick-slide  {
+    color: #fff;
+}
+
 .footer {
     text-align: center;
 }
