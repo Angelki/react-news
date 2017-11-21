@@ -46,15 +46,7 @@ class PCHeader extends React.Component {
             });
         }
     };
-    // handleSubmit(e) {
-    //     //向api提交数据
-    //     e.preventDefault();
-    //     var myFetchOptions = {
-    //         method: 'GET'
-    //     };
-    //     var formData = this.props.form.getFieldValue();
-    //     console.log(formData);
-    // };
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {

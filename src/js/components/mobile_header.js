@@ -45,15 +45,7 @@ class MobileHeader extends React.Component {
             });
         }
     };
-    // handleSubmit(e) {
-    //     //向api提交数据
-    //     e.preventDefault();
-    //     var myFetchOptions = {
-    //         method: 'GET'
-    //     };
-    //     var formData = this.props.form.getFieldValue();
-    //     console.log(formData);
-    // };
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -62,24 +54,41 @@ class MobileHeader extends React.Component {
                 var myFetchOptions = {
                     method: 'GET'
                 };
-                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&r_userName="
-                    +values.r_userName+
+                fetch("http://newsapi.gugujiankong.com/Handler.ashx?action="+this.state.action+
+                    "&userName"+values.userName+
+                    "&password"+values.password+
+                    "&r_userName=" +values.r_userName+
                     "&r_password="+values.r_password+
-                    "&r_confirmPassword"+values.r_confirmPassword,myFetchOptions)
+                    "&r_confirmPassword"+values.r_confirmPassword,
+                    myFetchOptions)
                     .then(response=>response.json())
                     .then(json=>{
                         this.setState({userNickName:json.NickUserName,userid:json.UserId});
+                        localStorage.userid = json.UserId;
+                        localStorage.userNickName = json.NickUserName;
                     });
+                if(this.state.action === "login") {
+                    this.setState({hasLogined: true});
+                }
                 message.success("请求成功");
                 this.setModalVisible(false);
             }
         });
     };
-    // fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
-    //     + "&username="+formData.userName+"&password="+formData.password
-    //     +"&r_userName=" + formData.r_userName + "&r_password="
-    //     + formData.r_password + "&r_confirmPassword="
-    //     + formData.r_confirmPassword, myFetchOptions)
+
+    callback(key) {
+        if(key === 1) {
+            this.setState({action: 'login'});
+        } else if(key === 2) {
+            this.setState({action: 'register'});
+        }
+    };
+    logout() {
+        localStorage.userid = '';
+        localStorage.userNickName = '';
+        this.setState({hasLogined: false});
+    }
+
     setModalVisible(value) {
         this.setState({modalVisible: value});
     };
@@ -101,7 +110,23 @@ class MobileHeader extends React.Component {
                 </header>
 
                 <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel={()=>this.setModalVisible(false)} onOk={()=>this.setModalVisible(false)} okText="关闭">
-                    <Tabs type="card">
+                    <Tabs type="card" onChange={this.callback.bind(this)}>
+                        <TabPane tab="登录" key="1">
+                            <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
+                                <FormItem label="账户">
+                                    {getFieldDecorator('userName')(
+                                        <Input placeholder="请输入您的账户"/>
+                                    )}
+                                </FormItem>
+                                <FormItem label="密码">
+                                    {getFieldDecorator('password')(
+                                        <Input type="password" placeholder="请输入您的密码"/>
+                                    )}
+                                </FormItem>
+                                <Button type="primary" htmlType="submit">登录</Button>
+                            </Form>
+
+                        </TabPane>
                         <TabPane tab="注册" key="2">
                             <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
                                 <FormItem label="账户">
@@ -121,24 +146,6 @@ class MobileHeader extends React.Component {
                                 </FormItem>
                                 <Button type="primary" htmlType="submit">注册</Button>
                             </Form>
-                            {/*<Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>*/}
-                            {/*<FormItem label="账户">*/}
-                            {/*{getFieldDecorator('userName', {*/}
-                            {/*rules: [{ required: true, message: '请输入你的用户名!' }],*/}
-                            {/*})(*/}
-                            {/*<Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />*/}
-                            {/*)}*/}
-                            {/*/!*<Input placeholder="请输入您的账号" {...getFieldProps('r_userName')} />*!/*/}
-                            {/*</FormItem>*/}
-
-                            {/*/!*<FormItem label="密码">*!/*/}
-                            {/*/!*<Input  type="password" placeholder="请输入您的密码" {...getFieldProps('r_password')} />*!/*/}
-                            {/*/!*</FormItem>*!/*/}
-                            {/*/!*<FormItem label="确认密码">*!/*/}
-                            {/*/!*<Input type="password" placeholder="请再次输入您的密码" {...getFieldProps('r_confirmPassword')} />*!/*/}
-                            {/*/!*</FormItem>*!/*/}
-                            {/*<Button type="primary" htmlType="submit">注册</Button>*/}
-                            {/*</Form>*/}
                         </TabPane>
                     </Tabs>
                 </Modal>
