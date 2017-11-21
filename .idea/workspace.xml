@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25f3ad1-eba4-4cb3-a223-c34fb70cd023" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/2.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/pc.css" afterPath="$PROJECT_DIR$/src/css/pc.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +20,7 @@
       <file leaf-file-name="pc_newscontainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/pc_newscontainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="361">
               <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
@@ -34,7 +32,7 @@
       <file leaf-file-name="pc.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/pc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
+            <state relative-caret-position="301">
               <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
@@ -106,8 +104,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="101" />
-    <option name="y" value="39" />
+    <option name="x" value="90" />
+    <option name="y" value="61" />
     <option name="width" value="1722" />
     <option name="height" value="945" />
   </component>
@@ -356,12 +354,12 @@
       <workItem from="1510621509744" duration="12785000" />
       <workItem from="1510882714265" duration="2791000" />
       <workItem from="1511151616663" duration="4857000" />
-      <workItem from="1511187470741" duration="9142000" />
+      <workItem from="1511187470741" duration="9448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40930000" />
+    <option name="totallyTimeSpent" value="41236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,7 +371,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="39" width="1722" height="945" extended-state="0" />
+    <frame x="90" y="61" width="1722" height="945" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32627866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -757,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/pc_newscontainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="361">
           <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
@@ -767,7 +765,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/pc.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
+        <state relative-caret-position="301">
           <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
         </state>
