@@ -167,9 +167,6 @@ class PCHeader extends React.Component {
                            <Menu.Item key="shishang">
                                <Icon type="appstore"/>时尚
                            </Menu.Item>
-                           <Menu.Item key="IT">
-                               <Icon type="appstore"/>IT
-                           </Menu.Item>
                            {userShow}
                        </Menu>
                    </Col>
