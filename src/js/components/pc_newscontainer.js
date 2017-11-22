@@ -5,6 +5,7 @@ import React from 'react';
 import {Row, Col} from 'antd';
 import {Tabs, Carousel} from 'antd';
 import PCNewsBlock from './pc_news_block';
+import PCNewsImageBlock from './pc_image_block';
 const TabPane = Tabs.TabPane;
 
 export default class PCNewsContainer extends React.Component {
@@ -23,6 +24,7 @@ export default class PCNewsContainer extends React.Component {
                                     <div><img src="./1.png" alt=""/></div>
                                 </Carousel>
                             </div>
+                            <PCNewsImageBlock count={9}></PCNewsImageBlock>
                         </div>
                         <Tabs className="tabs_news">
                             <TabPane tab="头条" key="1">
