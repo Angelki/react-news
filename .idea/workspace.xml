@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25f3ad1-eba4-4cb3-a223-c34fb70cd023" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/pc.css" afterPath="$PROJECT_DIR$/src/css/pc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/pc_image_block.js" afterPath="$PROJECT_DIR$/src/js/components/pc_image_block.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/pc_newscontainer.js" afterPath="$PROJECT_DIR$/src/js/components/pc_newscontainer.js" />
     </list>
@@ -22,42 +22,9 @@
       <file leaf-file-name="pc_newscontainer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/pc_newscontainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="26" column="65" lean-forward="false" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+            <state relative-caret-position="216">
+              <caret line="26" column="115" lean-forward="true" selection-start-line="26" selection-start-column="115" selection-end-line="26" selection-end-column="115" />
               <folding>
-                <element signature="e#45#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pc.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/pc.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3861">
-              <caret line="117" column="1" lean-forward="false" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pc_index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/pc_index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pc_news_block.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/pc_news_block.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
             </state>
@@ -67,12 +34,22 @@
       <file leaf-file-name="pc_image_block.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/pc_image_block.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="2112">
+              <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pc.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/pc.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="121" column="14" lean-forward="false" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,8 +88,8 @@
         <option value="$PROJECT_DIR$/src/js/components/mobile_list.js" />
         <option value="$PROJECT_DIR$/src/js/components/pc_product.js" />
         <option value="$PROJECT_DIR$/src/js/components/pc_index.js" />
-        <option value="$PROJECT_DIR$/src/css/pc.css" />
         <option value="$PROJECT_DIR$/src/js/components/pc_news_block.js" />
+        <option value="$PROJECT_DIR$/src/css/pc.css" />
         <option value="$PROJECT_DIR$/src/js/components/pc_image_block.js" />
         <option value="$PROJECT_DIR$/src/js/components/pc_newscontainer.js" />
       </list>
@@ -380,12 +357,12 @@
       <workItem from="1510882714265" duration="2791000" />
       <workItem from="1511151616663" duration="4857000" />
       <workItem from="1511187470741" duration="10933000" />
-      <workItem from="1511337260447" duration="5538000" />
+      <workItem from="1511337260447" duration="6728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48259000" />
+    <option name="totallyTimeSpent" value="49449000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -735,30 +712,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/pc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3861">
-          <caret line="117" column="1" lean-forward="false" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/pc_index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/pc_image_block.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,10 +731,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/pc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="121" column="14" lean-forward="false" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/pc_image_block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#45#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/pc_newscontainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="26" column="65" lean-forward="false" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+        <state relative-caret-position="216">
+          <caret line="26" column="115" lean-forward="true" selection-start-line="26" selection-start-column="115" selection-end-line="26" selection-end-column="115" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
           </folding>
