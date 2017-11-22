@@ -40,6 +40,10 @@ export default class PCNewsContainer extends React.Component {
                                 <PCNewsBlock count={20} type="tiyu" width="100%" bordered="false" />
                             </TabPane>
                         </Tabs>
+                        <div>
+                            <PCNewsImageBlock count={10} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="140px" />
+                            <PCNewsImageBlock count={20} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="140px" />
+                        </div>
                     </Col>
                     <Col span={2}></Col>
                 </Row>
