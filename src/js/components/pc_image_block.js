@@ -9,7 +9,7 @@ import {
     Link
 } from 'react-router-dom';
 
-export default class PCImageBlock extends React.Component {
+export default class PCNewsImageBlock extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -28,6 +28,7 @@ export default class PCImageBlock extends React.Component {
     };
     render() {
         const {news} = this.state;
+
         const styleImage = {
             display: "block",
             width:this.props.imageWidth,
@@ -35,10 +36,11 @@ export default class PCImageBlock extends React.Component {
         };
         const styleH3 = {
             width:this.props.imageWidth,
-            whiteSpace: "noewrap",
+            whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis"
-        }
+        };
+
         const newsList = news.length
             ?
             news.map((newsItem,index) => (
@@ -55,7 +57,8 @@ export default class PCImageBlock extends React.Component {
                 </div>
             ))
             :
-            '没有加载到任何新闻！'
+            '没有加载到任何新闻！';
+
         return (
             <Router>
                 <div className="topNewsList">
