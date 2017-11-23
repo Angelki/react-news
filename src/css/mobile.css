@@ -1,45 +1,36 @@
+html {
+    font-size: 50px;
+}
 
-/*html{*/
-    /*font-size: 50px;*/
-/*}*/
+#mobileHeader {
+    flex: 1;
+    background: #f6f6f6;
+}
 
-/*#mobileheader{*/
-    /*flex: 1;*/
-    /*background: #f6f6f6;*/
-/*}*/
+#mobileHeader header {
+    border-bottom: 1px solid #2db7f5;
+}
+#mobileHeader header img {
+    height: 50px;
+    padding-left: 10px;
 
-/*#mobileheader header{*/
-    /*border-bottom: 1px solid #2db7f5;*/
-    /*padding-left: 10px;*/
-/*}*/
+}
 
-/*#mobileheader header img{*/
-    /*height: 50px;*/
-/*}*/
+#mobileHeader header span {
+    font-size: 35px;
+    vertical-align: top;
+    padding-left: 8px;
+    color: #2db7f5;
+}
 
-/*#mobileheader header span{*/
-    /*font-size: 35px;*/
-    /*vertical-align: top;*/
-    /*padding-left: 5px;*/
-    /*color: #2db7f5;*/
-/*}*/
 
-/*#mobileheader i{*/
-    /*font-size: 0.5rem;*/
-    /*float: right;*/
-    /*margin-right: 0.3rem;*/
-    /*margin-top: 0.3rem;*/
-    /*color:#2db7f5;*/
-/*}*/
-
-/*#mobileheader ul li{*/
-    /*font-size: 30px;*/
-/*}*/
-
-/*#mobileheader .slick-list img{*/
-    /*height: 220px;*/
-    /*width:100%;*/
-/*}*/
+#mobileHeader i{
+    font-size: 0.5rem;
+    float: right;
+    margin-right: 0.3rem;
+    margin-top: 0.3rem;
+    color: #2db7f5;
+}
 
 #mobileDetailsContainer .title,.article-title .title {
     font-size: 0.44rem !important;
@@ -180,39 +171,3 @@ section{background:#f6f6f6;width:6.9rem}
 .m_launch_special .m_open_specail{width:100%;height:.63rem;line-height:.63rem;background-color:#eee;color:#4c9aea;text-align:center;font-size:.24rem}
 
 
-html {
-    font-size: 50px;
-}
-
-#mobileHeader {
-    flex: 1;
-    background: #f6f6f6;
-}
-
-#mobileHeader header {
-    border-bottom: 1px solid #2db7f5;
-}
-#mobileHeader header img {
-    height: 50px;
-    padding-left: 10px;
-
-}
-
-#mobileHeader header span {
-    font-size: 35px;
-    vertical-align: top;
-    padding-left: 8px;
-    color: #2db7f5;
-}
-
-/*.footer {*/
-    /*text-align: center;*/
-/*}*/
-
-/*#mobileHeader i{*/
-    /*font-size: 0.5rem;*/
-    /*float: right;*/
-    /*margin-right: 0.3rem;*/
-    /*margin-top: 0.3rem;*/
-    /*color: #2db7f5;*/
-/*}*/
