@@ -11,10 +11,14 @@ import { Menu, Icon, Tabs,
          Checkbox,
         Modal
 } from 'antd';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
+// import '../../css/pc.css';
+// import {Router, Route, Link, browserHistory} from 'react-router'
 
-import '../../css/pc.css';
-import {Router, Route, Link, browserHistory} from 'react-router'
-// import Modal from "antd/lib/modal/Modal.d";
 
 
 const FormItem = Form.Item;
@@ -110,9 +114,11 @@ class PCHeader extends React.Component {
             <Menu.Item key="logout" className="register">
                 {/*<Button type="primary" htmlType="button">{this.state.userNickName}</Button>*/}
                 {/*&nbsp;&nbsp;*/}
-                {/*<Link target="_blank">*/}
+                <Router>
+                <Link target="_blank" to={`/usercenter`}>
                     <Button type="dashed" htmlType="button">个人中心</Button>
-                {/*</Link>*/}
+                </Link>
+                </Router>
                 &nbsp;&nbsp;
                 <Button type="ghost" onClick={this.logout.bind(this)}>退出</Button>
             </Menu.Item>
