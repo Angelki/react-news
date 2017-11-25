@@ -15,6 +15,7 @@ import MediaQuery from 'react-responsive';
 import registerServiceWorker from './registerServiceWorker';
 import PCNewsDetails from './components/pc_details';
 import MobileNewsDetails from './components/mobile_news_details';
+import PCUserCenter from './components/pc_usercenter';
 
 
 export  default  class Root extends React.Component {
@@ -26,6 +27,7 @@ export  default  class Root extends React.Component {
                         <div>
                             <Route exact path="/" component={PCIndex} />
                             <Route path="/details/:uniquekey" component={PCNewsDetails} />
+                            <Route path="/usercenter" component={PCUserCenter} />
                             {/*<Route path={`/details/:uniquekey`} component={PCNewsDetails} />*/}
                         </div>
                     </Router>

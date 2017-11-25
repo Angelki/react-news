@@ -19,8 +19,6 @@ import {
 // import '../../css/pc.css';
 // import {Router, Route, Link, browserHistory} from 'react-router'
 
-
-
 const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -81,12 +79,12 @@ class PCHeader extends React.Component {
         });
     };
 
-    // componentWillMount(){
-    //     if (localStorage.userid!=='') {
-    //         this.setState({hasLogined:true});
-    //         this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid});
-    //     }
-    // };
+    componentWillMount(){
+        if (localStorage.userid!=='') {
+            this.setState({hasLogined:true});
+            this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid});
+        }
+    };
 
 
     setModalVisible(value) {
@@ -112,8 +110,8 @@ class PCHeader extends React.Component {
         const userShow = this.state.hasLogined
             ?
             <Menu.Item key="logout" className="register">
-                {/*<Button type="primary" htmlType="button">{this.state.userNickName}</Button>*/}
-                {/*&nbsp;&nbsp;*/}
+                <Button type="primary" htmlType="button">{this.state.userid}</Button>
+                &nbsp;&nbsp;
                 <Router>
                 <Link target="_blank" to={`/usercenter`}>
                     <Button type="dashed" htmlType="button">个人中心</Button>
