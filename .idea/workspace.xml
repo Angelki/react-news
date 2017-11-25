@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25f3ad1-eba4-4cb3-a223-c34fb70cd023" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/mobile_news_details.js" afterPath="$PROJECT_DIR$/src/js/components/mobile_news_details.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/common_comments.js" afterPath="$PROJECT_DIR$/src/js/components/common_comments.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common_comments.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="common_comments.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/common_comments.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state relative-caret-position="233">
+              <caret line="81" column="22" lean-forward="true" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile_news_details.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mobile_news_details.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/mobile_news_details.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+            <state relative-caret-position="425">
+              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -93,8 +93,8 @@
         <option value="$PROJECT_DIR$/src/js/components/pc_news_block.js" />
         <option value="$PROJECT_DIR$/src/css/mobile.css" />
         <option value="$PROJECT_DIR$/src/js/components/pc_details.js" />
-        <option value="$PROJECT_DIR$/src/js/components/common_comments.js" />
         <option value="$PROJECT_DIR$/src/js/components/mobile_news_details.js" />
+        <option value="$PROJECT_DIR$/src/js/components/common_comments.js" />
       </list>
     </option>
   </component>
@@ -377,12 +377,12 @@
       <workItem from="1511337260447" duration="7591000" />
       <workItem from="1511434853785" duration="3222000" />
       <workItem from="1511489544109" duration="6885000" />
-      <workItem from="1511572881237" duration="10460000" />
+      <workItem from="1511572881237" duration="12017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70879000" />
+    <option name="totallyTimeSpent" value="72436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,7 +404,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19306931" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19009902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -746,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/common_comments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/pc_details.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -768,8 +758,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/mobile_news_details.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="425">
+          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/common_comments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="81" column="22" lean-forward="true" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
           </folding>

@@ -9,7 +9,8 @@ import { Menu, Icon, Tabs,
     Input,
     Button,
     Card,
-    Modal
+    Modal,
+    notification
 } from 'antd';
 import {
     BrowserRouter as Router,
@@ -58,16 +59,33 @@ class CommonComments extends React.Component {
         });
     };
 
-    render(){
+    addUserCollection() {
+        var myFetchOptions = {
+            method: 'GET'
+        };
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=" + localStorage.userid +
+            "&uniquekey=" + this.props.uniquekey,
+            myFetchOptions)
+            .then(response => response.json())
+            .then(json => {
+            //收藏成功以后进行一下全局的提醒
+            notification['success']({message: 'ReactNews提醒', description: '收藏此文章成功'});
+        });
+    };
+    render() {
         let {getFieldDecorator} = this.props.form;
         const {comments} = this.state;
-        const commentList = comments.length?
-            comments.map((comment, index) =>(
-                <Card key={index} title={comment.UserName} extra={<a href="#">发布于 {comment.datetime}</a>}>
-                    <p>{comment.Comments}</p>
-                </Card>
-            ))
-            :
+        const commentList = comments.length ?
+        // comments.map((comment, index) =>(
+        //     <Card key={index} title={comment.UserName} extra={<a href="#">发布于 {comment.datetime}</a>}>
+        //         <p>{comment.Comments}</p>
+        //     </Card>
+        // ))
+
+            <Card key={comments.length-1} title={comments[comments.length-1].UserName} extra={<a href="#">发布于 {comments[comments.length-1].datetime}</a>}>
+                <p>{comments[comments.length-1].Comments}</p>
+            </Card>
+    :
             '没有加载到任何评论！';
         return (
             <div className="comment">
@@ -81,6 +99,8 @@ class CommonComments extends React.Component {
                                 )}
                             </FormItem>
                             <Button type="primary" htmlType="submit" >提交评论</Button>
+                            &nbsp;&nbsp;
+                            <Button type="primary" htmlType="button" onClick={this.addUserCollection.bind(this)}>收藏文章</Button>
                         </Form>
                     </Col>
                 </Row>
