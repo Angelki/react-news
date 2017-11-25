@@ -23,12 +23,12 @@ export  default  class Root extends React.Component {
                 <MediaQuery query='(min-device-width:1224px)'>
                     <Router>
                         <div>
-                            {/*<Route exact path="/" component={PCIndex} />*/}
+                            <Route exact path="/" component={PCIndex} />
                             <Route path="/details/:uniquekey" component={PCNewsDetails} />
                             {/*<Route path={`/details/:uniquekey`} component={PCNewsDetails} />*/}
                         </div>
                     </Router>
-                    <PCIndex/>
+                    {/*<PCIndex/>*/}
                 </MediaQuery>
                 <MediaQuery query='(max-device-width:1224px)'>
                     <MobileIndex/>
