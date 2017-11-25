@@ -32,7 +32,8 @@ export default class MobileList extends React.Component {
             ?
             news.map((newsItem,index) => (
                 <section key={index} className="m_article list-item special_section clearfix">
-                    <Link to={`details/${newsItem.uniquekey}`}>
+                    <Router>
+                    <Link to={`/details/${newsItem.uniquekey}`}>
                         <div className="m_article_img">
                             <img src={newsItem.thumbnail_pic_s} alt={newsItem.title} />
                         </div>
@@ -48,13 +49,13 @@ export default class MobileList extends React.Component {
                             </div>
                         </div>
                     </Link>
+                    </Router>
                 </section>
 
             ))
             :
             '没有加载到任何新闻！'
         return (
-            <Router>
                 <div>
                    <Row>
                        <Col span={24}>
@@ -62,7 +63,6 @@ export default class MobileList extends React.Component {
                        </Col>
                    </Row>
                 </div>
-            </Router>
         );
     }
 }

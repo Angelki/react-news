@@ -4,17 +4,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import  'antd/dist/antd.css';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 import PCIndex from './components/pc_index';
 import MobileIndex from './components/mobile_index';
 import MediaQuery from 'react-responsive';
 import registerServiceWorker from './registerServiceWorker';
 import PCNewsDetails from './components/pc_details';
-import {
-    BrowserRouter as Router,
-    HashRouter,
-    Route,
-    Link
-} from 'react-router-dom';
+import MobileNewsDetails from './components/mobile_news_details';
+
 
 export  default  class Root extends React.Component {
     render() {
@@ -31,7 +32,14 @@ export  default  class Root extends React.Component {
                     {/*<PCIndex/>*/}
                 </MediaQuery>
                 <MediaQuery query='(max-device-width:1224px)'>
-                    <MobileIndex/>
+                    <Router>
+                        <div>
+                            <Route exact  path="/" component={MobileIndex} />
+                            <Route exact path="/details/:uniquekey" component={MobileNewsDetails} />
+                            {/*<Route path={`/details/:uniquekey`} component={MobileNewsDetails} />*/}
+                        </div>
+                    </Router>
+                    {/*<MobileIndex/>*/}
                 </MediaQuery>
 
             </div>
